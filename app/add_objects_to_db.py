@@ -5,6 +5,8 @@ from sqlalchemy.orm import sessionmaker
 
 from app import basedir
 from app.models.character_base import CharacterBase
+from app.models.buff_base import BuffBase
+
 from enums.attributes import Attribute
 from enums.specialties import Specialty
 from enums.factions import Faction
@@ -24,7 +26,9 @@ HarumasaBase = CharacterBase(name = "Harumasa",
                              base_anomaly_mastery = 90, base_anomaly_proficiency = 95,
                              base_energy_regen = 1.2)
 
-session.add(HarumasaBase)
+HarumasaCore = BuffBase(name = "Masa Core", bonus_dmg_attribute = Attribute.all().name, bonus_dmg = 40)
+
+session.add(HarumasaCore)
 session.commit()
 
 print(HarumasaBase)
