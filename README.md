@@ -7,6 +7,7 @@ Using bash terminal:
 set up virutal environment:
 
     python -m venv venv
+    source venv/Scripts/activate
 
 set up libraries:
 
