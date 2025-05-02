@@ -1,6 +1,7 @@
-from enum import Enum, auto
+from enum import auto, Flag
 
-class Attribute(Enum):
+
+class Attribute(Flag):
     ELECTRIC: int = auto()
     ETHER: int = auto()
     FIRE: int = auto()
