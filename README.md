@@ -19,6 +19,14 @@ set up libraries:
     pip3 freeze > requirements.txt
 
 
-only install libraries:
+install libraries from requirements.txt:
 
     pip install -r requirements.txt
+
+use flask shell to set up your database:
+    
+    flask shell
+
+    from app import db
+    db.creata_all()
+    exit()
