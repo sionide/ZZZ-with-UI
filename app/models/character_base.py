@@ -1,7 +1,8 @@
 from app import db
 
 class CharacterBase(db.Model):
-    name = db.Column(db.String, primary_key=True)
+    id = db.Column(db.Integer, primary_key = True)
+    name = db.Column(db.String)
     attribute = db.Column(db.String)
     specialty = db.Column(db.String)
     faction = db.Column(db.String)
