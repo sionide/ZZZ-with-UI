@@ -1,4 +1,12 @@
 body {
     color:white;
-    background:#282b30;
+    background:#171738;
+}
+
+.table {
+    border:5px #141414 solid;
+}
+
+.table td {
+    background-color:#648DE5;
 }
