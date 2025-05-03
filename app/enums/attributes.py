@@ -20,3 +20,10 @@ class Attribute(AllFlag):
     FIRE: int = auto()
     ICE: int = auto()
     PHYSICAL: int = auto()
+
+def convert_string_to_attribute(string: str):
+    attributes_list = string.split('|')
+    result = Attribute(0)
+    for attribute in attributes_list:
+        result |= Attribute[attribute] # Uses a bitwise operator to enable attributes
+    return result
