@@ -10,7 +10,7 @@ class CharacterBase(db.Model):
     base_hp = db.Column(db.Integer)
     base_def = db.Column(db.Integer)
     base_atk = db.Column(db.Integer)
-    base_crit_rate = db.Column(db.Integer, default = 0)
+    base_crit_rate = db.Column(db.Integer, default = 5)
     base_crit_dmg = db.Column(db.Integer, default = 50)
     base_pen_ratio = db.Column(db.Integer, default = 0)
     base_impact = db.Column(db.Integer)
