@@ -4,12 +4,8 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app import basedir
-from app.models.character_base import CharacterBase
-from app.models.buff_base import BuffBase
-
-from enums.attributes import Attribute
-from enums.specialties import Specialty
-from enums.factions import Faction
+from models import CharacterBase, BuffBase, Weapon
+from enums import Attribute, Specialty, Faction
 
 # creates/finds file app.db as database to work with
 engine = create_engine('sqlite:///' + os.path.join(basedir, 'app.db'), echo=True)
@@ -26,9 +22,13 @@ HarumasaBase = CharacterBase(name = "Harumasa",
                              base_anomaly_mastery = 90, base_anomaly_proficiency = 95,
                              base_energy_regen = 1.2)
 
-HarumasaCore = BuffBase(name = "Masa Core", bonus_dmg_attribute = Attribute.all().name, bonus_dmg = 40)
+# HarumasaCore = BuffBase(name = "Masa Core", bonus_dmg_attribute = Attribute.all().name, bonus_dmg = 40)
 
-session.add(HarumasaCore)
+# buff = BuffBase(name = "Temp")
+
+Starlight_Engine1 = Weapon(name = "Starlight Engine1", weapon_base_atk = 100, unconditional_atk_percent = 25, conditional_atk_percent = 19.2)
+
+session.add(Starlight_Engine1)
 session.commit()
 
 print(HarumasaBase)

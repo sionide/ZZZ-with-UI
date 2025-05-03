@@ -2,8 +2,7 @@ from app import myapp_obj
 from flask import render_template
 from flask import redirect
 from app import db
-from app.models.character_base import CharacterBase
-from app.models.buff_base import BuffBase
+from models import CharacterBase, BuffBase, Weapon
 
 @myapp_obj.route("/")
 def main():
